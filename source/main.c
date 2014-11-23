@@ -146,6 +146,10 @@ int main()
 	initHb();
 	netloader_init();
 
+	aptOpenSession();
+	APT_SetAppCpuTimeLimit(NULL, 30);
+	aptCloseSession();
+
 	initBackground();
 	initErrors();
 	initMenu(&menu);
