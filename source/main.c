@@ -132,6 +132,10 @@ int main()
 	ptmInit();
 	initHb();
 
+	aptOpenSession();
+	APT_SetAppCpuTimeLimit(NULL, 30);
+	aptCloseSession();
+
 	initBackground();
 	initErrors();
 	initMenu(&menu);
